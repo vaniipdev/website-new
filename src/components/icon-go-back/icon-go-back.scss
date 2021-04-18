@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.box-icon-go-back {
+  position: relative;
+  transform: rotate(-180deg);
+  cursor: pointer;
+  & svg {
+    color: $marine_dark;
+  }
+  @include desktop {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+
+  }
+}

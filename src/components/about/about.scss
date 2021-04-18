@@ -1,0 +1,65 @@
+@import "../../scss/variables.scss";
+
+.container-profile {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.title-about {
+  width: 400px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  font-family: $outstanding;
+  color: $white-smoke;
+  @include desktop {
+    font-size: 72px;
+    line-height: 80px;
+
+  }
+}
+
+.box-profile {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 140px;
+  @include desktop {
+    padding-top: 320px;
+    flex-direction: row;
+
+  }
+}
+.content-profile {
+  flex: 0 0 70%;
+  padding: 20px;
+  & p {
+    color: #f1f4fa;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $general;
+  }
+  @include desktop {
+    padding: 0;
+    & p {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+}
+
+.image-profile {
+  padding: 0 57px;
+  flex: 1 1 100%;
+  text-align: center;
+  & img {
+    width: 100%;
+    max-width: 200px;
+  }
+  @include desktop {
+    flex: 0 0 30%;
+    & img {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import '../../scss/variables.scss';
+
+.container-menu-overhead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.95;
+  border-radius: 50%;
+  z-index: -500;
+  
+  .close-icon {
+    position: relative;
+    display: flex;
+    opacity: 0;
+    justify-content: flex-end;
+    width: 100%;
+    cursor: pointer;
+    color: aliceblue;
+    @include desktop {
+      right: 89px;
+      margin-bottom: 60px;
+    }
+    &.project-close-icon {
+
+    }
+  }
+  &.is-open-conteiner {
+    z-index: 40;
+    .close-icon {
+      opacity: 1;
+      transition: opacity 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    }
+  }
+  &.is-close-conteiner {
+    transition: z-index 0s ease 600ms;
+    z-index: -500;
+    .close-icon {
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    }
+  }
+}
+.badground-menu {
+  position: fixed;
+  z-index: -1;
+  top: 60px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.98;
+  border-radius: 50%;
+  background-color: #E46A45;
+  &.is-open-badground-menu {
+    transform: scale(300);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  }
+  &.is-close-badground-menu {
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    transform: scale(0);
+  }
+  @include desktop {
+    top: 60px;
+    right: 60px;
+  }
+}
+
+
+.box-menu-overhead {
+  position: fixed;
+  box-sizing: border-box;
+  width: calc(100vw - 32px);
+  height: 100vh;
+  margin-top: 60px;
+  margin: 40px 16px 0;
+  padding-top: 35px;
+  &.project-box-menu-overhead {
+    margin: 0px 16px 0;
+    padding-top: 22px;
+    padding-right: 3px;
+    @include desktop {
+      padding-top: 35px;
+      margin: 20px 60px 0;
+    }
+
+  }
+  .menu {
+    list-style: none;
+    position: absolute;
+    padding-left: 0px;
+    a {
+      text-decoration: none;
+    }
+    &.is-open {
+      left: 10px;
+      transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    }
+    &.is-close {
+      left: -500px;
+      transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    }
+  }
+  & li {
+    margin-right: 60px;
+    margin-bottom: 60px;
+    font-family: $outstanding;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    color: $white-smoke;
+    cursor: pointer;
+    &:hover {
+      color:#91F0DC;
+    }
+  }
+  @include desktop {
+    margin: 20px 60px 0;
+    & .menu {
+      padding-left: 40px;
+    }
+    & li { 
+      font-size: 72px;
+      line-height: 80px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../scss/variables.scss';
+
+.container-icon-menu{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  width: 50%;
+  top: 4px;
+  &.is-menu-open {
+    z-index: -1000;  
+  }
+  &.is-menu-close {
+    z-index: 1000; 
+    transition: z-index 0s ease 600ms;
+  }
+  &.is-at-home {
+    top: 60px;
+    right: 16px;
+    position: fixed;
+    padding: 0;
+
+  }
+  @include desktop {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    &.is-at-home {
+      top: 60px;
+      right: 60px; 
+    }
+  }
+}
+
+.box-icon-menu {
+  cursor: pointer;
+  color: $marine_dark;
+  &.dark svg {
+    color: $white-smoke;
+  }
+}
