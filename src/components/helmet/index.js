@@ -6,7 +6,7 @@ const Helment = ({title}) => {
     <Helmet>
       <meta charSet="utf-8" />
       <title>{title}</title>
-      <link rel="canonical" href="http://mysite.com/example" />
+      <link rel="canonical" href="http://www.vaniip.com" />
   </Helmet>
   )
 }
