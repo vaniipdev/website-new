@@ -96,7 +96,7 @@ const Home = props => {
         pageYOffset > innerHeight * 4 ? '' :<IconSocialMedia innerWidth={innerWidth} />
       }
       
-      <div className="secction container">
+      <div className="secction section-home container">
         <PlanetHeader innerWidth={innerWidth} />
         <Menu/>
         <Parallax className="main-title first" x={innerWidth > 420 ? [0, -30] : [5, 0]} >

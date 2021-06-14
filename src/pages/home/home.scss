@@ -28,6 +28,13 @@
     height: 140vh
   }
   @include desktop {
+    @include desktop-lg-max {
+      &.section-home {
+        height: calc(100vh + 200px);
+      }
+    }
+  }
+  @include desktop-lg-min {
     &.section-project {
       padding-top: 50px;
       height: 100vh;

@@ -32,10 +32,6 @@
   color: #fff;
   @include desktop {
     padding-top: 300px;
-
-     @include desktop-lg-max {
-      padding-top: 21vh;
-    }
   }
 }
 .background-projects {
@@ -140,7 +136,7 @@
     width: 500px;
     & img {
       max-height: initial;
-      max-width: 300px;
+      max-width: 500px;
       width: 100%;
     }
   }
